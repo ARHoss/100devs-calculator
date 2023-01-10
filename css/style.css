@@ -1,0 +1,142 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+  font-size: 62.5%;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+main {
+  height: 450px;
+  width: 40%;
+  margin: 100px 30% 0 30%;
+  background: black;
+  border-radius: 30px;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-evenly;
+}
+
+
+#screen {
+  height: 85px;
+  flex-basis: 80%;
+  background: white;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+#mathResult {
+  height: 50px;
+  flex-basis: 80%;
+  color: black;
+  text-align: center;
+  font-weight:bold;
+  font-size: 5rem;
+}
+
+#buttonsPad {
+  height: 300px;
+  flex-basis: 80%;
+  background: black;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+.numbersRow {
+  height: 65px;
+  flex-basis: 100%;
+  background: black;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.mathSymbol {
+  height: 50px;
+  flex-basis: 20%;
+  background: white;
+  color: black;
+  border-radius: 50%;
+
+  font-weight: bold;
+  font-size: 5rem;
+  text-align: center;
+
+  transition-property: background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+
+.mathSymbolClick {
+  background: grey;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width:400px) {
+
+  #mathResult {
+    padding-top: 10px;
+    font-size: 2rem;
+  }
+
+}
+
+@media screen and (max-width:350px) {
+
+  .mathSymbol {
+    padding-top: 5px;
+    font-size: 3rem;
+  }
+
+}
+
+
+
+@media (min-width:400px) and (max-width:700px) {
+
+  #mathResult {
+    padding-top: 10px;
+    font-size: 3rem;
+  }
+
+}
+
